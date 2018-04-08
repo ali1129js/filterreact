@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:00:01+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-08T15:31:00+02:00
+ * @Last modified time: 2018-04-08T17:40:39+02:00
  */
  import React from 'react';
  import PersonItem from './PersonItem'
@@ -12,16 +12,16 @@
     const cards = props.cards;
     const theList = cards.map((card) => {
      return (
-       <li className="li" key={card.id}>
+       <div key={card.id}>
          {card.name}
          <img src={card.avatar} alt="nn" className="img" />
          {card.color}
-       </li>
+       </div>
        );
        });
     return(
      <div className="person">
-       <PersonItem />
+       <PersonItem contacts={theList}/>
        {theList}
      </div>
      )

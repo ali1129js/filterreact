@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:42:57+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-08T15:31:05+02:00
+ * @Last modified time: 2018-04-08T19:01:04+02:00
  */
  import React, { Component } from 'react';
 
@@ -10,24 +10,25 @@
    constructor(){
      super();
      this.state = {
-       text: ''
+       search: ''
      }
      this.handleChange = this.handleChange.bind(this);
    }
    handleChange(e) {
-     const text = e.target.value;
-     this.setState({text: text});
+     const search = e.target.value;
+     this.setState({search: e.target.value});
    }
 
    render() {
-     return (
+
+   return (
        <div className="PersonItem">
          <input
            type="text"
-           value={this.state.text}
+           value={this.state.search}
            onChange={this.handleChange} />
          <br />
-
+            
          <hr />
        </div>
      );
