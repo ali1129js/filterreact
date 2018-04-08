@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:42:57+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-08T19:01:04+02:00
+ * @Last modified time: 2018-04-08T20:19:23+02:00
  */
  import React, { Component } from 'react';
 
@@ -16,11 +16,9 @@
    }
    handleChange(e) {
      const search = e.target.value;
-     this.setState({search: e.target.value});
+     this.setState({search: search});
    }
-
    render() {
-
    return (
        <div className="PersonItem">
          <input
@@ -28,7 +26,6 @@
            value={this.state.search}
            onChange={this.handleChange} />
          <br />
-            
          <hr />
        </div>
      );
