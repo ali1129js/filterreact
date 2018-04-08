@@ -2,24 +2,37 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:01:08+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-05T20:56:46+02:00
+ * @Last modified time: 2018-04-08T12:40:00+02:00
  */
 import React, { Component } from 'react';
 import Person from './Components/Person';
 import './App.css';
+let endpoint ='http://localhost:3000/myCard';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-
+      data:[]
     }
   }
-  
+
+  componentWillMount() {
+    fetch(endpoint, {method:"GET"})
+    .then(d => d.json())
+    .then(d => {
+        //console.log('Parsed json: ', d)
+        this.setState({data:d})
+      }).catch(ex => {
+        console.log('Parsing failed: ', ex)
+      });
+  }
+
   render() {
+
     return (
       <div className="App">
-        <Person />
+        <Person cards={this.state.data} />
       </div>
     );
   }

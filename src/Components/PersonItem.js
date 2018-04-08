@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:42:57+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-05T21:44:10+02:00
+ * @Last modified time: 2018-04-08T12:32:20+02:00
  */
  import React, { Component } from 'react';
 
@@ -18,19 +18,15 @@
      const text = e.target.value;
      this.setState({text: text});
    }
+
    render() {
+    console.log(this.props);
      return (
        <div className="PersonItem">
          <input
            type="text"
            value={this.state.text}
-           onChange={this.handleChange}/>
-         <div>
-           <hr />
-           <h3>
-             {this.state.text}
-           </h3>
-         </div>
+           onChange={this.handleChange} />
        </div>
      );
    }
