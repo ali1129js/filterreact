@@ -2,9 +2,9 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:00:01+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-08T15:13:06+02:00
+ * @Last modified time: 2018-04-08T15:31:00+02:00
  */
- import React, { Component } from 'react';
+ import React from 'react';
  import PersonItem from './PersonItem'
  //import PropTypes from 'prop-types';
 
@@ -12,22 +12,19 @@
     const cards = props.cards;
     const theList = cards.map((card) => {
      return (
-       <PersonItem key={card.id}
-         name={card.name}
-         avatar={card.avatar}
-         color={card.color}
-         />
-
+       <li className="li" key={card.id}>
+         {card.name}
+         <img src={card.avatar} alt="nn" className="img" />
+         {card.color}
+       </li>
        );
        });
-   console.log(cards);
-   return(
+    return(
      <div className="person">
+       <PersonItem />
        {theList}
      </div>
      )
   }
-
-
 
 export default Person;
