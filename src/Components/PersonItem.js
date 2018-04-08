@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-05T20:42:57+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-08T14:37:48+02:00
+ * @Last modified time: 2018-04-08T14:47:27+02:00
  */
  import React, { Component } from 'react';
 
@@ -28,7 +28,7 @@
            value={this.state.text}
            onChange={this.handleChange} />
          <br />
-         {this.props.name}<br />
+         {this.props.name}
          <img src={this.props.avatar} alt="aa" className="aa"></img>
          <hr />
        </div>
